@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using IllusionPlugin;
+using IPA.Old;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
@@ -61,7 +61,7 @@ namespace CustomAvatar
 						continue;
 					Trackers.Add(note);
 				}
-				if (Trackers.Count >= 0 && Trackers.Count <= 3)
+				if (Trackers.Count > 0 && Trackers.Count <= 3)
 					Plugin.FullBodyTrackingType = (Plugin.TrackingType)Plugin.Trackers.Count;
 				else
 					Plugin.FullBodyTrackingType = Plugin.TrackingType.None;
